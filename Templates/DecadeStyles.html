@@ -7,6 +7,7 @@
 		body {
 		background:hsl(326, 57%, 86%) !important;
 		font-family:avenir !important;
+		margin: 25px !important;
 
 		}
 
@@ -35,7 +36,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 </head>
 <body>
-	<a href="http://DecadeStyles.appspot.com/static/about.html">About</a>
+	<a href="http://3.14.148.127:5000/static/about.html">About</a>
 	<p></p>
 	<h2> Style Classifier </h2>
 
@@ -71,11 +72,10 @@
 			image: base64Image
 		}
 		console.log(message);
-		$.post("http://DecadeStyles.appspot.com/predict", JSON.stringify(message), function(response){
+		$.post("http://3.14.148.127:5000/predict", JSON.stringify(message), function(response){
 			$("#prediction").text(' Decades:  ' + response);
 			console.log(response);
 		});
 	});
 	</script>
 </body>
-</html>
